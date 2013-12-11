@@ -1,0 +1,2 @@
+export UNTAGGED=`docker images  | egrep "^<none>" | cut -c 41-53`
+echo UNTAGGED=$UNTAGGED
