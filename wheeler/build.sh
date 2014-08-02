@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build --tag=wheeler .
+docker build --tag=rciorba/wheeler .
