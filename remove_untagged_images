@@ -1,0 +1,6 @@
+#!/bin/bash
+export UNTAGGED=`docker images  | egrep "^<none>" | awk '{print $3}'`
+echo docker rmi $UNTAGGED
+if [[ "$1" == "--force" ]]; then
+    docker rmi $UNTAGGED
+fi
