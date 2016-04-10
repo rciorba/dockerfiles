@@ -3,9 +3,8 @@ MAINTAINER Radu Ciorba raduciorba@gmail.com
 RUN apt-get -qq update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install openjdk-7-jre -y
 ADD pidunu /usr/bin/pidunu
-ADD elasticsearch-1.4.4.deb /tmp/elasticsearch-1.4.4.deb
-RUN dpkg -i /tmp/elasticsearch-1.4.4.deb
-RUN mkdir -p /usr/share/elasticsearch/data/; chown elasticsearch:elasticsearch -R /usr/share/elasticsearch/data/
+ADD elasticsearch-2.1.1.deb /tmp/elasticsearch-2.1.1.deb
+RUN dpkg -i /tmp/elasticsearch-2.1.1.deb; mkdir -p /usr/share/elasticsearch/data/; chown elasticsearch:elasticsearch -R /usr/share/elasticsearch/data/
 VOLUME /usr/share/elasticsearch/data/
 EXPOSE 9200
 
